@@ -1,0 +1,2 @@
+(junho) junho@MacBook-Pro 2a_emotion_detection % python3 -c "from EmotionDetection import emotion_detector; print('Import successful')"
+Import successful

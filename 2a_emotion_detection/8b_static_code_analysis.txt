@@ -1,0 +1,4 @@
+(junho) junho@MacBook-Pro 2a_emotion_detection % pylint server.py --max-line-length=100
+
+-------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 9.09/10, +0.91)

@@ -1,0 +1,9 @@
+(junho) junho@MacBook-Pro 2a_emotion_detection % python3 -m unittest test_emotion_detection.py -v
+test_emotion_detector_empty_text (test_emotion_detection.TestEmotionDetection.test_emotion_detector_empty_text) ... ok
+test_emotion_detector_server_error (test_emotion_detection.TestEmotionDetection.test_emotion_detector_server_error) ... ok
+test_emotion_detector_success (test_emotion_detection.TestEmotionDetection.test_emotion_detector_success) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+OK

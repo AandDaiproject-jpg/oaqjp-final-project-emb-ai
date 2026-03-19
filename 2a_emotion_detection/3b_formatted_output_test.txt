@@ -1,0 +1,29 @@
+(junho) junho@MacBook-Pro 2a_emotion_detection % python3 << 'EOF'
+from EmotionDetection.emotion_detection import emotion_detector
+from unittest.mock import Mock, patch
+import json
+
+with patch('EmotionDetection.emotion_detection.requests.post') as mock_post:
+    mock_response = Mock()
+    mock_response.status_code = 200
+    mock_response.text = json.dumps({
+        'emotionPredictions': [{
+            'emotion': {
+                'anger': 0.1,
+                'disgust': 0.05,
+                'fear': 0.05,
+                'joy': 0.6,
+                'sadness': 0.2
+            }
+        }]
+    })
+    mock_post.return_value = mock_response
+
+    result = emotion_detector("I love this day!")
+    print("Result:", result)
+    print("Type:", type(result))
+    print("Dominant emotion:", result.get('dominant_emotion'))
+
+Result: {'anger': 0.1, 'disgust': 0.05, 'fear': 0.05, 'joy': 0.6, 'sadness': 0.2, 'dominant_emotion': 'joy'}
+Type: <class 'dict'>
+Dominant emotion: joy
